@@ -1,0 +1,10 @@
+- hosts: windows
+ tasks:
+         - name: Create new local account
+           win_user:
+                   name: "test2"
+                   fullname: "test2"
+                   password: "Passw0rd!"
+                   state: present
+                   groups:
+                           - Administrators
